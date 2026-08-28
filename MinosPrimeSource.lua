@@ -458,6 +458,7 @@ end
 
 MsgId = 0
 function Say(msg, dur)
+    MsgId += 1
     Dialog.TextTransparency = 0
     Dialog.UIStroke.Transparency = 0
     local id = MsgId
