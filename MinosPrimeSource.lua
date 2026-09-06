@@ -803,6 +803,7 @@ buttons[4].MouseButton1Click:Connect(function()
 end)
 
 buttons[5].MouseButton1Click:Connect(function()    
+    cooldown(buttons[5], 10)
     local closest = getclosest()
     if not closest then return end
     local ppos = closest.CFrame
