@@ -428,7 +428,7 @@ function fling(pchar)
         hrp.Anchored = false
     end)
     sethiddenproperty(hrp, "PhysicsRepRootPart", nil)
-    sethiddenproperty(hrp, "PhysicsRepRootRef", nil)
+    sethiddenproperty(hrp, "PhysicsRepRootRef", InstanceHandle.new(nil))
     hrp.CFrame = oldpos
     hrp.Velocity = Vector3.zero    
     hum:ChangeState("GettingUp")
