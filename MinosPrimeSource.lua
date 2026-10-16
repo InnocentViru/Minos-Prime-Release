@@ -413,6 +413,7 @@ function fling(pchar)
     
     repeat rs.Heartbeat:Wait()
         sethiddenproperty(hrp, "PhysicsRepRootPart", phrp)
+        sethiddenproperty(hrp, "PhysicsRepRootRef", InstanceHandle.new(phrp))
         hrp.CFrame = phrp.CFrame * CFrame.Angles(math.rad(90), 0, 0)            
         local old = hrp.Velocity
         hrp.Velocity = Vector3.new(9e9,9e9,9e9)
@@ -427,6 +428,7 @@ function fling(pchar)
         hrp.Anchored = false
     end)
     sethiddenproperty(hrp, "PhysicsRepRootPart", nil)
+    sethiddenproperty(hrp, "PhysicsRepRootRef", nil)
     hrp.CFrame = oldpos
     hrp.Velocity = Vector3.zero    
     hum:ChangeState("GettingUp")
